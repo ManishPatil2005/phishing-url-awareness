@@ -1,0 +1,13 @@
+# ==============================================================================
+# Phishing URL Awareness Checker - Requirements Specification
+# Author: Manish Pundlik Patil (Intern ID: EWB-OL-2026-CYB-0195)
+# EWB Edutech Private Limited | EWB Courses
+# ==============================================================================
+# No external third-party dependencies are required.
+# This project is designed strictly using Python standard libraries:
+# - re (Regular Expressions engine)
+# - urllib.parse (RFC 3986 URL parsing and component decomposition)
+# - sys (Standard system, stream, and exit management)
+# - typing (Static type hinting and contract verification)
+#
+# Minimum execution environment: Python 3.10 or higher.
