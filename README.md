@@ -95,7 +95,7 @@ The program executes a multi-stage static analysis pipeline:
 
 ### Clone or Download
 ```bash
-git clone https://github.com/manis-patil/phishing-url-awareness.git
+git clone https://github.com/ManishPatil2005/phishing-url-awareness.git
 cd phishing-url-awareness
 ```
 
@@ -323,4 +323,4 @@ In compliance with the project extension guidelines, five substantive enhancemen
 - **Course / Program:** EWB Cybersecurity Mini Project
 - **Organization:** EWB Edutech Private Limited
 - **Submission Date:** November 2026
-- **Repository:** [https://github.com/manis-patil/phishing-url-awareness](https://github.com/manis-patil/phishing-url-awareness)
+- **Repository:** [https://github.com/ManishPatil2005/phishing-url-awareness](https://github.com/ManishPatil2005/phishing-url-awareness)
