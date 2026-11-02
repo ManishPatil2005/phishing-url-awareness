@@ -19,8 +19,10 @@ import {
 } from "@/services/history";
 import { AnalysisResult, ScanHistoryItem } from "@/types";
 import { FileText, ShieldAlert, Sparkles, Terminal, Info, AlertOctagon } from "lucide-react";
+import { Windows7View } from "@/components/Windows7View";
 
 export default function Home() {
+  const [viewMode, setViewMode] = useState<"modern" | "win7">("modern");
   const [currentResult, setCurrentResult] = useState<AnalysisResult | null>(null);
   const [history, setHistory] = useState<ScanHistoryItem[]>([]);
   const [showReportModal, setShowReportModal] = useState(false);
@@ -60,10 +62,25 @@ export default function Home() {
 
   const metrics = calculateMetrics(history);
 
+  if (viewMode === "win7") {
+    return (
+      <div className="min-h-screen flex flex-col bg-slate-950">
+        <Navbar
+          viewMode={viewMode}
+          onToggleView={() => setViewMode("modern")}
+        />
+        <Windows7View onSwitchToModern={() => setViewMode("modern")} />
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen flex flex-col bg-background text-foreground">
       {/* Top Navbar */}
-      <Navbar />
+      <Navbar
+        viewMode={viewMode}
+        onToggleView={() => setViewMode("win7")}
+      />
 
       {/* Main SOC Dashboard Body */}
       <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-6">

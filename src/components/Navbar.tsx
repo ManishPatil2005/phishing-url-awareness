@@ -1,9 +1,14 @@
 "use client";
 
 import React from "react";
-import { ShieldCheck, Terminal, Github, Lock, Activity } from "lucide-react";
+import { ShieldCheck, Terminal, Github, Monitor } from "lucide-react";
 
-export function Navbar() {
+interface NavbarProps {
+  viewMode?: "modern" | "win7";
+  onToggleView?: () => void;
+}
+
+export function Navbar({ viewMode = "modern", onToggleView }: NavbarProps) {
   return (
     <header className="border-b border-border bg-card/60 backdrop-blur-xl sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
@@ -28,8 +33,20 @@ export function Navbar() {
           </div>
         </div>
 
-        {/* Tactical Status Indicators */}
-        <div className="flex items-center gap-4">
+        {/* Tactical Status Indicators & View Toggle */}
+        <div className="flex items-center gap-3 sm:gap-4">
+          {onToggleView && (
+            <button
+              type="button"
+              onClick={onToggleView}
+              className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-gradient-to-r from-blue-600/20 to-cyan-600/20 hover:from-blue-600/30 hover:to-cyan-600/30 border border-blue-500/40 text-cyan-300 text-xs font-semibold shadow-sm transition-all cursor-pointer"
+              title="Toggle Windows 7 Aero Glass & Terminal View"
+            >
+              <Monitor className="w-3.5 h-3.5 text-cyan-400" />
+              <span>{viewMode === "modern" ? "🪟 Windows 7 UI" : "🛡️ SOC Dark UI"}</span>
+            </button>
+          )}
+
           <div className="hidden md:flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-950 border border-border text-xs text-slate-300">
             <span className="w-2 h-2 rounded-full bg-success animate-pulse" />
             <span className="font-mono text-slate-400">DEFENSIVE INVARIANT:</span>
