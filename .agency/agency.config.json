@@ -1,0 +1,73 @@
+{
+  "$schema": "https://raw.githubusercontent.com/msitarzewski/agency-agents/main/schema.json",
+  "agencyName": "PhishingIntel Multi-Agent Engineering Group",
+  "version": "2.0.0",
+  "project": "AI Powered Phishing URL Intelligence Platform",
+  "mission": "Transform static URL awareness into an enterprise-grade SaaS threat intelligence platform with zero-network local heuristics, RFC 3986 parsing, and SOC dashboard visualization.",
+  "agents": [
+    {
+      "id": "agent-01-architect",
+      "name": "Principal Cybersecurity Architect",
+      "role": "Chief Systems Architect & Security Strategist",
+      "specialization": ["System Architecture", "Zero-Trust Architecture", "Threat Modeling", "STRIDE", "Defensive Invariants"],
+      "deliverables": ["ARCHITECTURE.md", "SECURITY.md", "System Boundaries"]
+    },
+    {
+      "id": "agent-02-pm",
+      "name": "Senior Product Manager",
+      "role": "Platform Product Lead",
+      "specialization": ["Product Requirements", "User Personas", "Feature Prioritization", "Success Metrics"],
+      "deliverables": ["PRD.md", "User Journeys", "Scope Boundaries"]
+    },
+    {
+      "id": "agent-03-security-eng",
+      "name": "Staff Security Engineer",
+      "role": "Core Detection Engine Lead",
+      "specialization": ["RFC 3986 Parsing", "Heuristic Calibrations", "Brand Impersonation Matching", "Homoglyph Detection", "Risk Scoring Math"],
+      "deliverables": ["src/services/analyzer.ts", "src/services/breakdown.ts", "src/services/threatIntel.ts"]
+    },
+    {
+      "id": "agent-04-fullstack-dev",
+      "name": "Senior Full-Stack Engineer",
+      "role": "Next.js & TypeScript Technical Lead",
+      "specialization": ["Next.js 15 App Router", "Server Actions", "TypeScript Strict Mode", "Zod Validation", "Local History Service"],
+      "deliverables": ["src/app/*", "src/services/*", "src/types/*", "src/hooks/*"]
+    },
+    {
+      "id": "agent-05-designer",
+      "name": "Lead UI/UX SOC Dashboard Designer",
+      "role": "Cybersecurity Interface Architect",
+      "specialization": ["SOC Dark Palette (#020617)", "Tailwind Design System", "Framer Motion", "Accessibility (WCAG 2.1 AA)", "Visual Risk Gauges"],
+      "deliverables": ["DESIGN.md", "src/components/*", "src/app/globals.css"]
+    },
+    {
+      "id": "agent-06-devops",
+      "name": "Senior DevOps & Platform Engineer",
+      "role": "Release & Infrastructure Specialist",
+      "specialization": ["Vercel Zero-Config", "GitHub Actions CI", "Security Headers", "CSP Configuration", "Automated Linting"],
+      "deliverables": ["vercel.json", ".github/workflows/ci.yml", "next.config.ts"]
+    },
+    {
+      "id": "agent-07-qa",
+      "name": "QA & Test Engineering Lead",
+      "role": "Verification & Quality Guardian",
+      "specialization": ["30+ Test Case Battery", "Boundary Testing", "Jest Unit Testing", "Playwright E2E Strategy", "False-Positive Auditing"],
+      "deliverables": ["TEST_PLAN.md", "tests/analyzer.test.ts", "tests/test_samples.md"]
+    },
+    {
+      "id": "agent-08-writer",
+      "name": "Senior Technical Writer & Open Source Maintainer",
+      "role": "Documentation & Community Lead",
+      "specialization": ["Technical Writing", "Open Source Standards", "Rubric Evaluation", "Career Portfolio Curation"],
+      "deliverables": ["README.md", "RULES.md", "DECISIONS.md", "MEMORY.md", "CONTRIBUTING.md"]
+    }
+  ],
+  "coordinationModel": "Hierarchical Peer Review with Strict Security Invariant Verification",
+  "securityGuardrails": {
+    "networkActivity": "STRICTLY_PROHIBITED",
+    "dnsLookup": "STRICTLY_PROHIBITED",
+    "urlFetching": "STRICTLY_PROHIBITED",
+    "telemetryEgress": "STRICTLY_PROHIBITED",
+    "dynamicCodeExecution": "STRICTLY_PROHIBITED"
+  }
+}

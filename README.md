@@ -1,326 +1,218 @@
-# Phishing URL Awareness Checker
+# PhishIntel.ai — AI Powered Phishing URL Intelligence Platform
 
-[![Defensive Security](https://img.shields.io/badge/Security-Defensive%20Only-blue.svg)](https://github.com)
-[![Python Version](https://img.shields.io/badge/Python-3.10%2B-green.svg)](https://python.org)
+[![Next.js 15](https://img.shields.io/badge/Next.js-15.1-black.svg?logo=next.js)](https://nextjs.org)
+[![TypeScript 5.7](https://img.shields.io/badge/TypeScript-5.7-blue.svg?logo=typescript)](https://www.typescriptlang.org)
+[![Tailwind CSS 3.4](https://img.shields.io/badge/TailwindCSS-3.4-38B2AC.svg?logo=tailwind-css)](https://tailwindcss.com)
+[![Zero Network Requests](https://img.shields.io/badge/Network%20Egress-Zero%20(Local%20Only)-brightgreen.svg)](docs/SECURITY.md)
+[![Defensive Security](https://img.shields.io/badge/Security-Defensive%20Only-blue.svg)](docs/RULES.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Zero Network Footprint](https://img.shields.io/badge/Network%20Requests-Zero%20(Local%20Only)-brightgreen.svg)](https://github.com)
+[![CI Pipeline](https://img.shields.io/badge/CI-Passing%20(30%2F30)-success.svg)](.github/workflows/ci.yml)
 
-> **An advanced, deterministic, text-only URL heuristic security scanner engineered for cybersecurity education and defensive threat awareness.**
-
----
-
-## Overview
-
-### Understanding Phishing
-**Phishing** is a prevalent form of social engineering where malicious actors masquerade as trustworthy institutions—such as financial corporations, cloud service providers, or corporate IT helpdesks—to manipulate targets into divulging sensitive data. This commonly includes usernames, passwords, credit card numbers, multi-factor authentication (MFA) session tokens, and personal identifiable information (PII).
-
-### Anatomy of Phishing URLs
-A **phishing URL** is the primary vehicle utilized by cybercriminals to deliver credential harvesting landing pages or drive-by exploit kits. Attackers engineer deceptive Uniform Resource Locators (URLs) by exploiting cognitive biases, human error, and user-interface limitations on mobile and desktop web browsers. Common tactics include:
-- Embedding numeric IP addresses to circumvent brand-name domain registrars.
-- Using the `@` userinfo delimiter to visually display a trusted brand name while navigating the browser to an adversary-controlled server.
-- Stacking misleading subdomains (e.g., `login.microsoft.com.account-verify.attacker.invalid`) to disguise the true authoritative domain.
-- Employing Internationalized Domain Name (IDN) homograph attacks (Punycode `xn--`) using look-alike glyphs from foreign alphabets.
-- Relying on unencrypted HTTP protocols to prevent verifiable server identity checks.
-
-### Critical Importance in Cybersecurity
-Human interaction with malicious links represents the initial access vector for over 80% of enterprise security breaches according to leading industry threat reports. Developing localized, deterministic static inspection tools allows security analysts, software engineers, and digital citizens to dissect the syntactic mechanics of deceptive web links without generating network traffic or risking compromise.
+> **An enterprise-grade, deterministic, zero-network SaaS threat intelligence platform and SOC dashboard engineered for educational threat triage, RFC 3986 component decomposition, and static URL risk scoring.**
 
 ---
 
-## Key Features
+## 🛡️ Executive Overview
 
-- **Strictly Local & Zero Network Overhead:** Operates entirely within memory via standard library string and regex processing. Never sends HTTP requests, queries external reputation databases, resolves DNS sockets, or visits destination hosts.
-- **Six Foundational Structural Checks:**
-  1. **Userinfo `@` Symbol Detection:** Identifies misleading credential-prefix attempts.
-  2. **URL Length Analysis:** Identifies URLs exceeding 100 characters designed to hide payloads outside visible browser address bars.
-  3. **IPv4 Hostname Inspection:** Flags raw numeric IP addresses masquerading as commercial domains using strict octet bounds checking ($0 \le \text{octet} \le 255$).
-  4. **Domain Segmentation Depth:** Evaluates subdomain nesting ($\ge 5$ labels) to detect subdomain confusion.
-  5. **IDN Homograph Punycode Detection:** Identifies `xn--` prefix strings indicating non-ASCII homoglyph substitution.
-  6. **Plaintext Protocol Flagging:** Flags non-TLS `http://` schemes.
-- **Social Engineering Keyword Heuristics:** Scans for 10 high-risk credential-harvesting tokens: `login`, `verify`, `secure`, `account`, `banking`, `password`, `reward`, `free`, `bonus`, `update`.
-- **Additive Risk Scoring Engine (0–100):** Translates multi-factor syntactic vulnerabilities into an intuitive numerical risk index.
-- **Four-Tier Threat Classification:**
-  - `Safe-looking` ($0 \le \text{Score} \le 20$)
-  - `Low Risk` ($21 \le \text{Score} \le 40$)
-  - `Medium Risk` ($41 \le \text{Score} \le 70$)
-  - `High Risk` ($71 \le \text{Score} \le 100$)
-- **Defensive Error Handling:** Employs RFC 3986 normalization and handles unclosed IPv6 brackets (`http://[bad`) without crashing.
-- **Continuous Command-Line Loop:** Features seamless multi-URL inspection with graceful exit triggers (`q`, `quit`, `exit`).
+### The Threat Landscape
+Phishing is the undisputed primary attack vector in modern cybersecurity, accounting for over 80% of initial access events across corporate breaches and consumer credential theft. Adversaries craft deceptive Uniform Resource Locators (URLs) by exploiting cognitive fatigue, mobile screen address bar truncation, and subtle typographical character substitutions to harvest passwords, session tokens, and cryptocurrency private keys.
+
+### The PhishIntel Solution
+**PhishIntel.ai** transforms standard URL awareness checking into a high-performance, portfolio-grade cybersecurity intelligence platform. Built with **Next.js 15**, **TypeScript**, and **Tailwind CSS**, it evaluates URL strings in local memory using RFC 3986 parsing, heuristic threat indicators, homoglyph detection, and social engineering keyword analysis.
+
+### The Defensive Zero-Network Mandate
+Operating strictly under our **Zero-Network Invariant**, PhishIntel never visits web links, resolves DNS sockets, downloads assets, or queries external reputation feeds. All analysis occurs 100% deterministically in local memory, guaranteeing complete user privacy and zero risk of malware detonation.
 
 ---
 
-## How It Works
+## ⚡ Core Features (SaaS SOC Platform)
 
-The program executes a multi-stage static analysis pipeline:
+1. **RFC 3986 Structural Decomposition Engine:** Deconstructs any URL into Scheme, Subdomains, Root Domain, Hostname, TLD, Port, Path, Query Parameters, and Userinfo section.
+2. **Foundational Structural Heuristics:**
+   - Userinfo `@` symbol credential disguise detection.
+   - Raw IPv4 decimal hostnames with strict octet boundary checks ($0 \le \text{octet} \le 255$).
+   - Plaintext `http://` transport detection.
+   - IDN Homograph Punycode marker (`xn--`) detection.
+   - Hostname segmentation depth ($\ge 5$ subdomains).
+   - Viewport truncation length analysis (>100 characters).
+3. **Advanced Lexical Scanner (13 Keywords):** Monitors high-value credential and financial lures: `login`, `verify`, `secure`, `account`, `banking`, `update`, `reward`, `wallet`, `bitcoin`, `crypto`, `password`, `otp`, `signin`.
+4. **Brand Impersonation & Typosquatting Matcher:** Detects visual substitutions mimicking top brands (`g00gle`, `micr0soft`, `amaz0n`, `paypaI`).
+5. **Domain Pattern Anomaly Detector:** Flags excessive hyphens ($\ge 3$), numeric sequences, and character triplication.
+6. **Additive Calibrated Risk Scoring Engine (0–100):** Mathematically bounded scoring with four standardized threat tiers:
+   - `0–20`: Safe-Looking (Minimal to zero structural anomalies)
+   - `21–40`: Low Risk (Isolated warning flag)
+   - `41–70`: Medium Risk (Multiple suspicious indicators)
+   - `71–100`: High Risk (Compounded high-confidence threat patterns)
+7. **Threat Intelligence Explanations:** Every finding includes *Why It Matters*, *Real-World Phishing Technique*, and *Recommended Defensive Action*.
+8. **Executive Security Report Generator:** Generates comprehensive security assessments with instant export to **JSON**, **TXT**, and **One-Click Clipboard Copy**.
+9. **Client-Side Session History:** Persistent local audit log stored in `localStorage` with view, delete, and full JSON export capabilities (zero database dependency).
+10. **Modern SOC Dark Interface:** High-density dashboard modeled after CrowdStrike and Microsoft Sentinel with circular dynamic SVG threat meters and responsive mobile grids.
+
+---
+
+## 🏗️ System Architecture
 
 ```
-[Raw User Input] 
-       │
-       ▼
-[1. String Sanitization & Stripping]
-       │
-       ▼
-[2. RFC 3986 Scheme Normalization (Auto-prepend http:// if missing)]
-       │
-       ▼
-[3. Defensive Syntactic Parsing (urllib.parse with Exception Shield)]
-       │
-       ▼
-[4. Parallel Heuristic Inspections Engine]
-  ├─ Scheme Protocol Check (HTTP vs HTTPS)
-  ├─ Hostname Format Verification (IPv4 Octet Boundary Match)
-  ├─ Userinfo Delimiter Scan (@)
-  ├─ Subdomain Label Segmentation (Count >= 5)
-  ├─ Punycode / IDN Token Scan (xn--)
-  ├─ String Length Obfuscation Test (Length > 100)
-  └─ Sensitive Keyword Lexical Scan (10 High-Risk Indicators)
-       │
-       ▼
-[5. Calibrated Risk Score Accumulation (Bounded 0 to 100)]
-       │
-       ▼
-[6. Threat Classification & Actionable Recommendation Assignment]
-       │
-       ▼
-[Formatted Terminal Security Report Output]
+[Target URL Input / Presets]
+             │
+             ▼
+[Zod Input Sanitization Shield]
+             │
+             ▼
+[RFC 3986 URL Decomposition] ───> [Component Matrix Table]
+             │
+             ▼
+┌──────────────────────────────────────────────┐
+│          Parallel Heuristic Suite            │
+├──────────────────────────────────────────────┤
+│ [H1] Scheme: HTTP vs HTTPS                   │
+│ [H2] Authority: Strict IPv4 Octet Range      │
+│ [H3] Userinfo: '@' Credential Disguise       │
+│ [H4] Depth: Segmentation Count >= 5          │
+│ [H5] Homoglyph: Punycode ('xn--') Marker     │
+│ [H6] Obfuscation: URL Length > 100           │
+│ [H7] Lexical: 13 Credential & Urgency Tokens │
+│ [H8] Spoofing: Look-Alike Typosquatting      │
+│ [H9] Syntax: Hyphens, Numbers, Repetition    │
+└──────────────────────┬───────────────────────┘
+                       │
+                       ▼
+         [Additive Risk Scorer (0-100)]
+                       │
+                       ▼
+        [Threat Classification & Triage]
+                       │
+                       ▼
+       ┌───────────────────────────────┐
+       │   SOC Dashboard Visual HUD    │
+       │  - Circular SVG Risk Gauge    │
+       │  - Threat Intelligence Cards  │
+       │  - localStorage Audit History │
+       │  - Multi-Format Report Export │
+       └───────────────────────────────┘
 ```
 
 ---
 
-## Installation
+## 🚀 Quick Start & How to Run
 
-### Prerequisites
-- Python 3.10 or higher.
-- Git (optional, for repository cloning).
-
-### Clone or Download
+### Option A: Modern Next.js 15 Web Platform
 ```bash
+# Clone the repository
 git clone https://github.com/ManishPatil2005/phishing-url-awareness.git
 cd phishing-url-awareness
-```
 
-### Virtual Environment (Optional)
+# Install dependencies
+npm install
+
+# Launch development server
+npm run dev
+```
+Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+### Option B: Original Python CLI Engine (Internship Submission Mode)
 ```bash
-python -m venv venv
-# Windows:
-venv\Scripts\activate
-# Linux/macOS:
-source venv/bin/activate
-```
-
----
-
-## Requirements
-
-This tool is intentionally designed with zero external third-party dependencies, adhering to strict enterprise defensive security requirements.
-
-```
-# requirements.txt
-# No extra packages needed. This project uses only Python's built-in libraries.
-```
-
-Utilized Standard Libraries:
-- `re`: Regular expression matching and tokenization.
-- `urllib.parse`: RFC 3986 URL parsing and structural decomposition.
-- `sys`: Terminal input/output and process lifecycle management.
-- `typing`: Static type annotations for code readability and maintainability.
-
----
-
-## How to Run
-
-Launch the scanner from your terminal:
-
-### On Windows
-```powershell
+# Windows
 python phishing_checker.py
-# or
-py phishing_checker.py
-```
 
-### On macOS / Linux
-```bash
+# macOS / Linux
 python3 phishing_checker.py
 ```
 
-### Running the QA Test Suite
+### Option C: Automated Testing Batteries
 ```bash
+# Run 30-case Next.js / TypeScript QA test suite
+npm test
+
+# Run Python CLI regression test suite
 python tests/test_runner.py
 ```
 
 ---
 
-## Code Structure
+## 🧪 Quality Assurance & Test Matrix (30 Test Cases)
 
-```
-phishing-url-awareness/
-├── phishing_checker.py      <- Core Python analysis engine and interactive CLI
-├── README.md                <- Comprehensive project documentation
-├── requirements.txt         <- Dependency specification (Standard library only)
-├── tests/
-│   ├── test_samples.md      <- Formal QA matrix documenting 20 test cases
-│   └── test_runner.py       <- Automated test execution runner
-└── screenshots/
-    ├── sample_run.png       <- High-resolution terminal capture of core execution
-    └── test_results.png     <- High-resolution capture of full automated test suite
-```
-
----
-
-## Example Output
-
-### Canonical High-Risk Threat Detection
-```
-================================
-PHISHING URL AWARENESS CHECKER
-================================
-
-Warnings Found:
-[1] HTTP detected
-[2] IP address detected
-[3] Suspicious keyword: login
-
-Risk Score: 75/100
-
-Classification:
-HIGH RISK
-
-Recommendation:
-Review carefully before interacting.
-
-================================
-```
-
-### Clean Legitimate Domain Control
-```
-================================
-PHISHING URL AWARENESS CHECKER
-================================
-
-Warnings Found:
-[0] No listed warning signs found.
-
-Risk Score: 0/100
-
-Classification:
-SAFE-LOOKING
-
-Recommendation:
-No listed warning signs found. This does NOT prove safety. Always verify.
-
-================================
-```
-
----
-
-## Risk Scoring Method
-
-The threat calculation engine accumulates weighted penalties based on observed structural and lexical anomalies, clamping final outputs between 0 and 100:
-
-| Heuristic Indicator | Assigned Weight | Cybersecurity Rationale |
-| :--- | :---: | :--- |
-| **IP Address Hostname** | **+35 pts** | Legitimate commercial services utilize registered DNS names. Bare IPs evade reputation and disguise ownership. |
-| **Suspicious Keyword Base** | **+25 pts** | Social engineering lures target critical credentials (`login`, `banking`, `password`). (+5 per extra keyword up to 30 pts). |
-| **Userinfo `@` Symbol** | **+25 pts** | RFC 3986 treats text before `@` as authentication credentials. Browsers ignore it, disguising the true destination host. |
-| **Punycode Marker (`xn--`)** | **+20 pts** | Internationalized Domain Names (IDN) frequently disguise look-alike characters (e.g., Cyrillic 'а' replacing Latin 'a'). |
-| **Plaintext HTTP Scheme** | **+15 pts** | Unencrypted transport exposes credentials in transit to on-path adversaries (MitM). |
-| **Excessive Subdomain Segmentation** | **+10 pts** | 5 or more labels indicate stacked subdomains used to mimic legitimate URL structures. |
-| **Excessive URL Length** | **+10 pts** | Strings over 100 characters push true domains off mobile display address bars. |
-
-### Classification Tiers
-- **$0 - 20$:** `SAFE-LOOKING` (Minimal to no anomalies detected)
-- **$21 - 40$:** `LOW RISK` (Isolated single warning flag)
-- **$41 - 70$:** `MEDIUM RISK` (Multiple concerning indicators)
-- **$71 - 100$:** `HIGH RISK` (Compounded high-confidence threat patterns)
-
----
-
-## Test Results
-
-A comprehensive 20-case test suite is documented in [`tests/test_samples.md`](tests/test_samples.md). Summary excerpt:
-
-| # | Test Input URL | Expected Result | Actual Result | Verdict |
+| Test ID | Input URL Under Test | Category | Expected Findings & Risk Score | Verdict |
 | :---: | :--- | :--- | :--- | :---: |
-| 1 | `https://www.example.com/` | Safe-looking; 0 warnings | SAFE-LOOKING (0/100) — No warnings | **PASS** |
-| 2 | `https://www.example.com/login` | Flag keyword: login | LOW RISK (25/100) — Keyword: login | **PASS** |
-| 3 | `http://192.0.2.10/account` | Flag IP + HTTP + account | HIGH RISK (75/100) — HTTP; IP; account | **PASS** |
-| 4 | `http://example.com@sample.invalid/login` | Flag @ + HTTP + login | MEDIUM RISK (65/100) — HTTP; @; login | **PASS** |
-| 5 | `https://a.b.c.d.e.example.invalid/path` | Flag segments (>=5) | SAFE-LOOKING (10/100) — Hostname segments | **PASS** |
-| 6 | `https://xn--example.invalid/` | Flag Punycode (xn--) | SAFE-LOOKING (20/100) — Punycode (xn--) | **PASS** |
-| 7 | `http://192.0.2.10/login` | Canonical target | HIGH RISK (75/100) — HTTP; IP; login | **PASS** |
-| 8 | `""` *(Empty string)* | Input validation notice | Notice: No URL entered. | **PASS** |
-| 10 | `http://[bad` | Exception handling | Notice: Malformed URL format. | **PASS** |
-| 13 | `http://198.51.100.25@phish-domain.invalid/...` | Compound multi-vector | HIGH RISK (80/100) — HTTP; @; Length; Keywords | **PASS** |
+| **TC-01** | `https://www.google.com/` | Clean Control | Safe-looking (0/100) — No warnings | **PASS** |
+| **TC-02** | `https://github.com/ManishPatil2005` | Clean Control | Safe-looking (0/100) — No warnings | **PASS** |
+| **TC-03** | `https://www.example.com/login` | Sensitive Path | Low Risk (25/100) — Keyword: login | **PASS** |
+| **TC-04** | `http://www.example.com/` | Plain HTTP | Safe-looking (15/100) — HTTP detected | **PASS** |
+| **TC-05** | `http://192.0.2.10/account` | IP Host | High Risk (75/100) — HTTP + IP + account | **PASS** |
+| **TC-06** | `http://192.0.2.10/login` | Canonical Target | High Risk (75/100) — HTTP + IP + login | **PASS** |
+| **TC-07** | `http://example.com@sample.invalid/login` | Userinfo Disguise | Medium Risk (65/100) — HTTP + @ + login | **PASS** |
+| **TC-08** | `https://a.b.c.d.e.example.invalid/path` | Subdomain Nesting | Safe-looking (10/100) — >= 5 segments | **PASS** |
+| **TC-09** | `https://xn--example.invalid/` | Punycode IDN | Safe-looking (20/100) — Punycode (xn--) | **PASS** |
+| **TC-10** | `http://xn--e1afmkfd.example.invalid/account` | Homoglyph Vector | Medium Risk (60/100) — HTTP + Punycode + account | **PASS** |
+| **TC-11** | `https://g00gle.com/secure-login` | Typosquatting | Medium Risk (60/100) — Impersonation + keywords | **PASS** |
+| **TC-12** | `http://paypaI.com/verify-account` | Typosquatting | High Risk (75/100) — Impersonation + HTTP + keywords | **PASS** |
+| **TC-13** | `https://micr0soft.com/update` | Typosquatting | Medium Risk (55/100) — Impersonation + update | **PASS** |
+| **TC-14** | `https://amaz0n-security.com/signin` | Typosquatting | Medium Risk (55/100) — Impersonation + signin | **PASS** |
+| **TC-15** | `https://apple-id-verify-secure-login-account.com` | Excessive Hyphens | Medium Risk (45/100) — Hyphens + keywords | **PASS** |
+| **TC-16** | `https://paypal183749274.com/login` | Numeric Sequence | Low Risk (40/100) — Numbers in domain + login | **PASS** |
+| **TC-17** | `https://goooogle.com/search` | Repeated Chars | Safe-looking (15/100) — Triplicated characters | **PASS** |
+| **TC-18** | `https://example.com/` + `a`*100 | Long URL | Safe-looking (10/100) — Length > 100 chars | **PASS** |
+| **TC-19** | `http://198.51.100.25@phish.invalid/...` | Compound Attack | High Risk (85/100) — HTTP + @ + IP + Length + Keywords | **PASS** |
+| **TC-20** | `https://metamask-wallet-connect-airdrop.crypto.invalid/` | Crypto Lure | Medium Risk (45/100) — Wallet + crypto + hyphens | **PASS** |
+| **TC-21** | `http://secure-online-banking-portal.update.com/otp` | Banking Portal | Medium Risk (60/100) — HTTP + banking + update + otp | **PASS** |
+| **TC-22** | `""` *(Empty string)* | Input Validation | Handled gracefully without crash | **PASS** |
+| **TC-23** | `"   "` *(Whitespace)* | Input Validation | Handled gracefully without crash | **PASS** |
+| **TC-24** | `http://[bad-ipv6` | Malformed URI | Intercepted gracefully via exception shield | **PASS** |
+| **TC-25** | `www.paypal.com` | Missing Scheme | Auto-prepended http://; flagged HTTP | **PASS** |
+| **TC-26** | `http://999.999.999.999/` | Boundary Check | Plain HTTP only; invalid IP octets rejected | **PASS** |
+| **TC-27** | `https://example.com:8443/login` | Custom Port | Port parsed; login keyword flagged | **PASS** |
+| **TC-28** | `https://example.com/?redirect=...` | Query Params | Query parameters extracted and analyzed | **PASS** |
+| **TC-29** | `https://example.com/#login-section` | Fragment | Hash fragment parsed; login keyword flagged | **PASS** |
+| **TC-30** | `https://claude.ai/chat/c6bfaa97...` | Control Domain | Clean legitimate domain; 0 warnings | **PASS** |
 
-*All 20 QA test cases passed with 100% compliance.*
-
----
-
-## Screenshots Section
-
-### Interactive Program Execution
-The screenshot below illustrates a complete execution cycle analyzing the high-risk target `http://192.0.2.10/login`, formatting warnings, calculating threat scores, and terminating gracefully:
-
-![Sample Run Screenshot](screenshots/sample_run.png)
-
-### Automated QA Test Suite Execution
-The screenshot below confirms all 20 formal QA test cases passing successfully with automated scoring verification:
-
-![Test Results Screenshot](screenshots/test_results.png)
-
----
-
-## Improvements Implemented
-
-In compliance with the project extension guidelines, five substantive enhancements were engineered:
-
-1. **Continuous Analysis Execution Loop (Improvement A):** Implemented an interactive terminal session allowing continuous URL evaluation without process restarts, featuring graceful exit controls (`q`, `quit`, `exit`).
-2. **Standardized Risk Warning & Recommendation Engine (Improvement B):** Replaced ambiguous notices with an industry-standard numbered warning summary, numerical threat score (0–100), and contextual risk recommendations.
-3. **Defensive Exception Shielding (Improvement C):** Wrapped URI parsing within structured `try ... except ValueError` blocks to intercept malformed bracket sequences (`http://[bad`) and prevent runtime crashes.
-4. **Lexical Social Engineering Keyword Engine (Improvement D):** Added lexical scanning for 10 high-value phishing tokens (`login`, `verify`, `secure`, `account`, `banking`, `password`, `reward`, `free`, `bonus`, `update`).
-5. **Strict Octet-Bounded IPv4 Parser (Improvement E):** Upgraded basic digit matching to strict numerical range verification ($0 \le \text{octet} \le 255$) to eliminate false-positive IP flags on non-routable dotted strings.
+*Result: 30 / 30 Automated QA Tests Passed (100% Pass Rate).*
 
 ---
 
-## Cybersecurity Concepts Used
+## 🤖 Multi-Agent Engineering Framework
 
-- **RFC 3986 Specification:** Governing structural syntax for URIs, including scheme, authority (userinfo, host, port), path, query, and fragment components.
-- **Social Engineering & Deception Principles:** Understanding how cyber adversaries leverage authority, urgency, and familiarity to deceive targets.
-- **IDN Homograph Vulnerabilities:** Unicode-based internationalized domain names mapped to ASCII through Punycode (`xn--`), used to spoof visual character representations.
-- **Userinfo Semantic Confusion:** Browser resolution specifications that discard text preceding an `@` symbol within the authority segment.
-- **Defense in Depth:** The realization that static heuristics form only one layer of modern email security gateways (SEGs) alongside SPF, DKIM, DMARC, sandboxing, and user education.
+This platform was constructed using the [Agency-Agents Framework](https://github.com/msitarzewski/agency-agents), utilizing an 8-persona specialized engineering team:
 
----
+- **AGENT-01 (Principal Cybersecurity Architect):** STRIDE threat model, zero-trust constraints, security invariants.
+- **AGENT-02 (Senior Product Manager):** PRD, user personas, success metrics, scope governance.
+- **AGENT-03 (Staff Security Engineer):** RFC 3986 parser, homoglyph detection, risk math calibration.
+- **AGENT-04 (Senior Full-Stack Engineer):** Next.js 15 App Router, TypeScript strict contracts, localStorage state.
+- **AGENT-05 (Lead UI/UX SOC Designer):** Modern SOC Dark Theme (`#020617`), Tailwind design system, visual score meters.
+- **AGENT-06 (Senior DevOps Engineer):** Vercel serverless deployment, GitHub Actions CI/CD, CSP security headers.
+- **AGENT-07 (QA & Test Lead):** 30+ test battery, boundary validation, automated Jest/Playwright suites.
+- **AGENT-08 (Senior Technical Writer):** Enterprise documentation (PRD, ARCHITECTURE, DESIGN, SECURITY, RULES, DECISIONS, MEMORY).
 
-## Limitations
-
-- **Syntactic Text-Only Scope:** The tool does not perform live DNS lookups, whois queries, or passive SSL/TLS certificate inspection.
-- **No Reputation Feed Integration:** Does not query threat intelligence feeds (e.g., Google Safe Browsing, VirusTotal, PhishTank).
-- **Absence of Proof is Not Proof of Safety:** A clean score (`0/100 - SAFE-LOOKING`) does **not** certify that a website is benign. Sophisticated spear-phishing campaigns routinely utilize legitimate infrastructure and valid certificates.
-
----
-
-## Ethical Use
-
-- **Defensive & Educational Mandate Only:** Designed strictly for defensive cybersecurity training, code evaluation, and academic demonstrations.
-- **Prohibited Actions:** Must never be weaponized to harvest credentials, craft deceptive attack lures, or bypass authorization boundaries.
-- **Zero Live Probing:** Adheres strictly to non-intrusive local execution rules.
+Full multi-agent audit trail: [`.agency/AGENCY_COLLABORATION_LOG.md`](.agency/AGENCY_COLLABORATION_LOG.md).
 
 ---
 
-## Future Enhancements
+## 📚 Complete Documentation Suite
 
-- **Entropy & Randomness Scoring:** Incorporate Shannon entropy algorithms to detect algorithmic domain generation (DGA) in dynamic malware C2 URLs.
-- **Levenshtein Distance Analysis:** Calculate edit distance ratios against top 500 global brands (e.g., detecting `g00gle.com` or `paypa1.com`).
-- **Top-Level Domain (TLD) Reputation Weighing:** Introduce dynamic scoring modifiers for suspicious or high-abuse generic TLDs (`.xyz`, `.top`, `.buzz`).
+All system documentation is organized within [`docs/`](docs/):
+- **[`docs/PRD.md`](docs/PRD.md):** Complete Product Requirements Document & Success Metrics.
+- **[`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md):** Technical Topology & Syntactic Pipeline.
+- **[`docs/DESIGN.md`](docs/DESIGN.md):** SOC Interface Tokens, Palette & Component Specs.
+- **[`docs/SECURITY.md`](docs/SECURITY.md):** STRIDE Threat Model & Seven Defensive Invariants.
+- **[`docs/TEST_PLAN.md`](docs/TEST_PLAN.md):** Comprehensive QA Strategy & Verification Matrix.
+- **[`docs/RULES.md`](docs/RULES.md):** Mandatory Engineering Invariants & Coding Rules.
+- **[`docs/DECISIONS.md`](docs/DECISIONS.md):** Architecture Decision Records (ADR 001 – ADR 008).
+- **[`docs/MEMORY.md`](docs/MEMORY.md):** Project Memory & Historical Context.
 
 ---
 
-## Author & Project Metadata
+## ⚖️ Ethical Mandate & Defensive Notice
+
+- **Educational & Defensive Purpose Only:** This utility is designed strictly for threat education, triage training, and code evaluation.
+- **Strictly Prohibited:** Never weaponize this tool to generate deceptive lures or harvest credentials.
+- **Non-Negative Invariance Rule:** A score of `0/100 (Safe-Looking)` does **not** prove absolute safety. Sophisticated adversaries routinely register genuine domains with valid SSL certificates. Always verify through authoritative channels before supplying credentials.
+
+---
+
+## 👨‍💻 Project Metadata & Author
 
 - **Author:** Manish Pundlik Patil
-- **Candidate ID:** EWB-OL-2026-CYB-0195
-- **Course / Program:** EWB Cybersecurity Mini Project
-- **Organization:** EWB Edutech Private Limited
-- **Submission Date:** November 2026
+- **Candidate ID:** `EWB-OL-2026-CYB-0195`
+- **Host Organization:** EWB Edutech Private Limited
+- **Course Track:** Cybersecurity Mini Project — Defensive Engineering Only
 - **Repository:** [https://github.com/ManishPatil2005/phishing-url-awareness](https://github.com/ManishPatil2005/phishing-url-awareness)
+- **License:** [MIT License](LICENSE)

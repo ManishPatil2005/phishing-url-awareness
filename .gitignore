@@ -44,6 +44,12 @@ Desktop.ini
 $RECYCLE.BIN/
 .DS_Store
 
+# Next.js & Node
+node_modules/
+.next/
+out/
+next-env.d.ts
+
 # Temporary work files
 workbook_extracted.txt
 create_screenshots.py

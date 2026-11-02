@@ -1,0 +1,36 @@
+name: CI Test & Security Audit Pipeline
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    name: Automated QA Test Battery & Linting
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js Runtime
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+
+      - name: Install NPM Dependencies
+        run: npm ci || npm install
+
+      - name: Run 30-Test Automated QA Battery
+        run: npm test
+
+      - name: Set up Python Runtime
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run Python CLI Regression Tests
+        run: python tests/test_runner.py
