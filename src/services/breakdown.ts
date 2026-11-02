@@ -1,4 +1,4 @@
-import { UrlBreakdown } from "@/types";
+import type { UrlBreakdown } from "../types/index.ts";
 
 export function decomposeUrl(rawUrl: string): UrlBreakdown {
   const trimmed = rawUrl.trim();

@@ -8,12 +8,25 @@ on:
 
 jobs:
   test:
-    name: Automated QA Test Battery & Linting
+    name: Automated QA Test Battery & Zero-Network Audit
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout Source Code
         uses: actions/checkout@v4
+
+      - name: Verify Zero-Network Invariant (Static Scan)
+        run: |
+          echo "Auditing core rule and service engine for prohibited network calls..."
+          if grep -rnw 'src/rules' -e 'fetch(' -e 'axios' -e 'http.get' -e 'net.Socket' -e 'dns.resolve'; then
+            echo "ERROR: Outbound network call detected in src/rules! Violates zero-network invariant."
+            exit 1
+          fi
+          if grep -rnw 'src/services' -e 'fetch(' -e 'axios' -e 'http.get' -e 'net.Socket' -e 'dns.resolve'; then
+            echo "ERROR: Outbound network call detected in src/services! Violates zero-network invariant."
+            exit 1
+          fi
+          echo "SUCCESS: Zero outbound network sockets verified in core engine."
 
       - name: Set up Node.js Runtime
         uses: actions/setup-node@v4
@@ -26,6 +39,12 @@ jobs:
 
       - name: Run 30-Test Automated QA Battery
         run: npm test
+
+      - name: Run 205-Sample Statistical Calibration Suite
+        run: node --experimental-strip-types tests/calibrate.mjs
+
+      - name: Run Next.js Production Build
+        run: npm run build
 
       - name: Set up Python Runtime
         uses: actions/setup-python@v5

@@ -1,0 +1,1437 @@
+[
+  {
+    "id": "BENIGN-001",
+    "url": "https://www.google.com/",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 15,
+    "description": "Benign legitimate URL #1"
+  },
+  {
+    "id": "BENIGN-002",
+    "url": "https://accounts.google.com/ServiceLogin",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 15,
+    "description": "Benign legitimate URL #2"
+  },
+  {
+    "id": "BENIGN-003",
+    "url": "https://mail.google.com/mail/u/0/#inbox",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 15,
+    "description": "Benign legitimate URL #3"
+  },
+  {
+    "id": "BENIGN-004",
+    "url": "https://docs.google.com/document/d/1a2b3c4d5e/edit",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 15,
+    "description": "Benign legitimate URL #4"
+  },
+  {
+    "id": "BENIGN-005",
+    "url": "https://drive.google.com/drive/my-drive",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 15,
+    "description": "Benign legitimate URL #5"
+  },
+  {
+    "id": "BENIGN-006",
+    "url": "https://github.com/ManishPatil2005",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 15,
+    "description": "Benign legitimate URL #6"
+  },
+  {
+    "id": "BENIGN-007",
+    "url": "https://github.com/torvalds/linux/blob/master/Makefile",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 15,
+    "description": "Benign legitimate URL #7"
+  },
+  {
+    "id": "BENIGN-008",
+    "url": "https://microsoft.com/en-us/windows",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 15,
+    "description": "Benign legitimate URL #8"
+  },
+  {
+    "id": "BENIGN-009",
+    "url": "https://login.microsoftonline.com/common/oauth2/v2.0/authorize",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 15,
+    "description": "Benign legitimate URL #9"
+  },
+  {
+    "id": "BENIGN-010",
+    "url": "https://apple.com/iphone-16-pro/",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 15,
+    "description": "Benign legitimate URL #10"
+  },
+  {
+    "id": "BENIGN-011",
+    "url": "https://amazon.com/dp/B08N5WRWNW",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 15,
+    "description": "Benign legitimate URL #11"
+  },
+  {
+    "id": "BENIGN-012",
+    "url": "https://aws.amazon.com/console/",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 15,
+    "description": "Benign legitimate URL #12"
+  },
+  {
+    "id": "BENIGN-013",
+    "url": "https://netflix.com/browse",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 15,
+    "description": "Benign legitimate URL #13"
+  },
+  {
+    "id": "BENIGN-014",
+    "url": "https://paypal.com/signin",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 15,
+    "description": "Benign legitimate URL #14"
+  },
+  {
+    "id": "BENIGN-015",
+    "url": "https://linkedin.com/feed/",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 15,
+    "description": "Benign legitimate URL #15"
+  },
+  {
+    "id": "BENIGN-016",
+    "url": "https://twitter.com/home",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 15,
+    "description": "Benign legitimate URL #16"
+  },
+  {
+    "id": "BENIGN-017",
+    "url": "https://x.com/explore",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 15,
+    "description": "Benign legitimate URL #17"
+  },
+  {
+    "id": "BENIGN-018",
+    "url": "https://claude.ai/chat/c6bfaa97-602e-4ba5-9087-69c654157747",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 15,
+    "description": "Benign legitimate URL #18"
+  },
+  {
+    "id": "BENIGN-019",
+    "url": "https://anthropic.com/research",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 15,
+    "description": "Benign legitimate URL #19"
+  },
+  {
+    "id": "BENIGN-020",
+    "url": "https://openai.com/index/hello-gpt-4o/",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 15,
+    "description": "Benign legitimate URL #20"
+  },
+  {
+    "id": "BENIGN-021",
+    "url": "https://chatgpt.com/",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 15,
+    "description": "Benign legitimate URL #21"
+  },
+  {
+    "id": "BENIGN-022",
+    "url": "https://wikipedia.org/wiki/Phishing",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 15,
+    "description": "Benign legitimate URL #22"
+  },
+  {
+    "id": "BENIGN-023",
+    "url": "https://en.wikipedia.org/wiki/Transport_Layer_Security",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 15,
+    "description": "Benign legitimate URL #23"
+  },
+  {
+    "id": "BENIGN-024",
+    "url": "https://youtube.com/watch?v=dQw4w9WgXcQ",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 15,
+    "description": "Benign legitimate URL #24"
+  },
+  {
+    "id": "BENIGN-025",
+    "url": "https://sbi.co.in/web/personal-banking",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 15,
+    "description": "Benign legitimate URL #25"
+  },
+  {
+    "id": "BENIGN-026",
+    "url": "https://hdfcbank.com/personal/ways-to-bank/online-banking",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 15,
+    "description": "Benign legitimate URL #26"
+  },
+  {
+    "id": "BENIGN-027",
+    "url": "https://icicibank.com/personal-banking/insta-banking/internet-banking",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 15,
+    "description": "Benign legitimate URL #27"
+  },
+  {
+    "id": "BENIGN-028",
+    "url": "https://axisbank.com/",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 15,
+    "description": "Benign legitimate URL #28"
+  },
+  {
+    "id": "BENIGN-029",
+    "url": "https://kotak.com/en/personal-banking.html",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 15,
+    "description": "Benign legitimate URL #29"
+  },
+  {
+    "id": "BENIGN-030",
+    "url": "https://paytm.com/",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 15,
+    "description": "Benign legitimate URL #30"
+  },
+  {
+    "id": "BENIGN-031",
+    "url": "https://phonepe.com/",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 15,
+    "description": "Benign legitimate URL #31"
+  },
+  {
+    "id": "BENIGN-032",
+    "url": "https://cloudflare.com/learning/security/what-is-phishing/",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 15,
+    "description": "Benign legitimate URL #32"
+  },
+  {
+    "id": "BENIGN-033",
+    "url": "https://stackoverflow.com/questions/11227809/why-is-processing-a-sorted-array-faster",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 15,
+    "description": "Benign legitimate URL #33"
+  },
+  {
+    "id": "BENIGN-034",
+    "url": "https://reddit.com/r/netsec/",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 15,
+    "description": "Benign legitimate URL #34"
+  },
+  {
+    "id": "BENIGN-035",
+    "url": "https://dropbox.com/home",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 15,
+    "description": "Benign legitimate URL #35"
+  },
+  {
+    "id": "BENIGN-036",
+    "url": "https://zoom.us/j/123456789",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 15,
+    "description": "Benign legitimate URL #36"
+  },
+  {
+    "id": "BENIGN-037",
+    "url": "https://spotify.com/us/premium/",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 15,
+    "description": "Benign legitimate URL #37"
+  },
+  {
+    "id": "BENIGN-038",
+    "url": "https://www.example.com/",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 15,
+    "description": "Benign legitimate URL #38"
+  },
+  {
+    "id": "BENIGN-039",
+    "url": "https://example.com/about-us",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 15,
+    "description": "Benign legitimate URL #39"
+  },
+  {
+    "id": "BENIGN-040",
+    "url": "https://example.com/contact-support",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 15,
+    "description": "Benign legitimate URL #40"
+  },
+  {
+    "id": "BENIGN-041",
+    "url": "https://example.com/products/catalog?page=2&sort=asc",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 15,
+    "description": "Benign legitimate URL #41"
+  },
+  {
+    "id": "BENIGN-042",
+    "url": "https://example.com/blog/2026/04/cybersecurity-fundamentals",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 15,
+    "description": "Benign legitimate URL #42"
+  },
+  {
+    "id": "BENIGN-043",
+    "url": "https://example.com/privacy-policy.html",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 15,
+    "description": "Benign legitimate URL #43"
+  },
+  {
+    "id": "BENIGN-044",
+    "url": "https://example.com/terms-of-service",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 15,
+    "description": "Benign legitimate URL #44"
+  },
+  {
+    "id": "BENIGN-045",
+    "url": "https://example.com/docs/api/v1/endpoints",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 15,
+    "description": "Benign legitimate URL #45"
+  },
+  {
+    "id": "BENIGN-046",
+    "url": "https://example.com/images/logo.png",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 15,
+    "description": "Benign legitimate URL #46"
+  },
+  {
+    "id": "BENIGN-047",
+    "url": "https://example.com/assets/css/main.min.css",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 15,
+    "description": "Benign legitimate URL #47"
+  },
+  {
+    "id": "BENIGN-048",
+    "url": "https://example.com/assets/js/bundle.min.js",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 15,
+    "description": "Benign legitimate URL #48"
+  },
+  {
+    "id": "BENIGN-049",
+    "url": "https://example.com/faq?topic=billing&lang=en",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 15,
+    "description": "Benign legitimate URL #49"
+  },
+  {
+    "id": "BENIGN-050",
+    "url": "https://example.com/search?q=open+source+intelligence",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 15,
+    "description": "Benign legitimate URL #50"
+  },
+  {
+    "id": "BENIGN-051",
+    "url": "https://example.com/press/releases/q3-results",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 15,
+    "description": "Benign legitimate URL #51"
+  },
+  {
+    "id": "BENIGN-052",
+    "url": "https://example.com/careers/open-positions",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 15,
+    "description": "Benign legitimate URL #52"
+  },
+  {
+    "id": "BENIGN-053",
+    "url": "https://example.com/events/2026/annual-summit",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 15,
+    "description": "Benign legitimate URL #53"
+  },
+  {
+    "id": "BENIGN-054",
+    "url": "https://example.com/community/forum/thread/4921",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 15,
+    "description": "Benign legitimate URL #54"
+  },
+  {
+    "id": "BENIGN-055",
+    "url": "https://example.com/sitemap.xml",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 15,
+    "description": "Benign legitimate URL #55"
+  },
+  {
+    "id": "BENIGN-056",
+    "url": "https://example.com/robots.txt",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 15,
+    "description": "Benign legitimate URL #56"
+  },
+  {
+    "id": "BENIGN-057",
+    "url": "https://example.com/downloads/whitepaper-zero-trust.pdf",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 15,
+    "description": "Benign legitimate URL #57"
+  },
+  {
+    "id": "BENIGN-058",
+    "url": "https://example.com/case-studies/enterprise-migration",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 15,
+    "description": "Benign legitimate URL #58"
+  },
+  {
+    "id": "BENIGN-059",
+    "url": "https://example.com/solutions/cloud-infrastructure",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 15,
+    "description": "Benign legitimate URL #59"
+  },
+  {
+    "id": "BENIGN-060",
+    "url": "https://example.com/pricing/calculator",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 15,
+    "description": "Benign legitimate URL #60"
+  },
+  {
+    "id": "BENIGN-061",
+    "url": "https://sub60.example.com/path60/index.html?param=value60",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 19,
+    "description": "Synthetic clean URL variant #61"
+  },
+  {
+    "id": "BENIGN-062",
+    "url": "https://sub61.example.com/path61/index.html?param=value61",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 19,
+    "description": "Synthetic clean URL variant #62"
+  },
+  {
+    "id": "BENIGN-063",
+    "url": "https://sub62.example.com/path62/index.html?param=value62",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 19,
+    "description": "Synthetic clean URL variant #63"
+  },
+  {
+    "id": "BENIGN-064",
+    "url": "https://sub63.example.com/path63/index.html?param=value63",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 19,
+    "description": "Synthetic clean URL variant #64"
+  },
+  {
+    "id": "BENIGN-065",
+    "url": "https://sub64.example.com/path64/index.html?param=value64",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 19,
+    "description": "Synthetic clean URL variant #65"
+  },
+  {
+    "id": "BENIGN-066",
+    "url": "https://sub65.example.com/path65/index.html?param=value65",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 19,
+    "description": "Synthetic clean URL variant #66"
+  },
+  {
+    "id": "BENIGN-067",
+    "url": "https://sub66.example.com/path66/index.html?param=value66",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 19,
+    "description": "Synthetic clean URL variant #67"
+  },
+  {
+    "id": "BENIGN-068",
+    "url": "https://sub67.example.com/path67/index.html?param=value67",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 19,
+    "description": "Synthetic clean URL variant #68"
+  },
+  {
+    "id": "BENIGN-069",
+    "url": "https://sub68.example.com/path68/index.html?param=value68",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 19,
+    "description": "Synthetic clean URL variant #69"
+  },
+  {
+    "id": "BENIGN-070",
+    "url": "https://sub69.example.com/path69/index.html?param=value69",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 19,
+    "description": "Synthetic clean URL variant #70"
+  },
+  {
+    "id": "BENIGN-071",
+    "url": "https://sub70.example.com/path70/index.html?param=value70",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 19,
+    "description": "Synthetic clean URL variant #71"
+  },
+  {
+    "id": "BENIGN-072",
+    "url": "https://sub71.example.com/path71/index.html?param=value71",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 19,
+    "description": "Synthetic clean URL variant #72"
+  },
+  {
+    "id": "BENIGN-073",
+    "url": "https://sub72.example.com/path72/index.html?param=value72",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 19,
+    "description": "Synthetic clean URL variant #73"
+  },
+  {
+    "id": "BENIGN-074",
+    "url": "https://sub73.example.com/path73/index.html?param=value73",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 19,
+    "description": "Synthetic clean URL variant #74"
+  },
+  {
+    "id": "BENIGN-075",
+    "url": "https://sub74.example.com/path74/index.html?param=value74",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 19,
+    "description": "Synthetic clean URL variant #75"
+  },
+  {
+    "id": "BENIGN-076",
+    "url": "https://sub75.example.com/path75/index.html?param=value75",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 19,
+    "description": "Synthetic clean URL variant #76"
+  },
+  {
+    "id": "BENIGN-077",
+    "url": "https://sub76.example.com/path76/index.html?param=value76",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 19,
+    "description": "Synthetic clean URL variant #77"
+  },
+  {
+    "id": "BENIGN-078",
+    "url": "https://sub77.example.com/path77/index.html?param=value77",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 19,
+    "description": "Synthetic clean URL variant #78"
+  },
+  {
+    "id": "BENIGN-079",
+    "url": "https://sub78.example.com/path78/index.html?param=value78",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 19,
+    "description": "Synthetic clean URL variant #79"
+  },
+  {
+    "id": "BENIGN-080",
+    "url": "https://sub79.example.com/path79/index.html?param=value79",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 19,
+    "description": "Synthetic clean URL variant #80"
+  },
+  {
+    "id": "BENIGN-081",
+    "url": "https://sub80.example.com/path80/index.html?param=value80",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 19,
+    "description": "Synthetic clean URL variant #81"
+  },
+  {
+    "id": "BENIGN-082",
+    "url": "https://sub81.example.com/path81/index.html?param=value81",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 19,
+    "description": "Synthetic clean URL variant #82"
+  },
+  {
+    "id": "BENIGN-083",
+    "url": "https://sub82.example.com/path82/index.html?param=value82",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 19,
+    "description": "Synthetic clean URL variant #83"
+  },
+  {
+    "id": "BENIGN-084",
+    "url": "https://sub83.example.com/path83/index.html?param=value83",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 19,
+    "description": "Synthetic clean URL variant #84"
+  },
+  {
+    "id": "BENIGN-085",
+    "url": "https://sub84.example.com/path84/index.html?param=value84",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 19,
+    "description": "Synthetic clean URL variant #85"
+  },
+  {
+    "id": "BENIGN-086",
+    "url": "https://sub85.example.com/path85/index.html?param=value85",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 19,
+    "description": "Synthetic clean URL variant #86"
+  },
+  {
+    "id": "BENIGN-087",
+    "url": "https://sub86.example.com/path86/index.html?param=value86",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 19,
+    "description": "Synthetic clean URL variant #87"
+  },
+  {
+    "id": "BENIGN-088",
+    "url": "https://sub87.example.com/path87/index.html?param=value87",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 19,
+    "description": "Synthetic clean URL variant #88"
+  },
+  {
+    "id": "BENIGN-089",
+    "url": "https://sub88.example.com/path88/index.html?param=value88",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 19,
+    "description": "Synthetic clean URL variant #89"
+  },
+  {
+    "id": "BENIGN-090",
+    "url": "https://sub89.example.com/path89/index.html?param=value89",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 19,
+    "description": "Synthetic clean URL variant #90"
+  },
+  {
+    "id": "BENIGN-091",
+    "url": "https://sub90.example.com/path90/index.html?param=value90",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 19,
+    "description": "Synthetic clean URL variant #91"
+  },
+  {
+    "id": "BENIGN-092",
+    "url": "https://sub91.example.com/path91/index.html?param=value91",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 19,
+    "description": "Synthetic clean URL variant #92"
+  },
+  {
+    "id": "BENIGN-093",
+    "url": "https://sub92.example.com/path92/index.html?param=value92",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 19,
+    "description": "Synthetic clean URL variant #93"
+  },
+  {
+    "id": "BENIGN-094",
+    "url": "https://sub93.example.com/path93/index.html?param=value93",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 19,
+    "description": "Synthetic clean URL variant #94"
+  },
+  {
+    "id": "BENIGN-095",
+    "url": "https://sub94.example.com/path94/index.html?param=value94",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 19,
+    "description": "Synthetic clean URL variant #95"
+  },
+  {
+    "id": "BENIGN-096",
+    "url": "https://sub95.example.com/path95/index.html?param=value95",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 19,
+    "description": "Synthetic clean URL variant #96"
+  },
+  {
+    "id": "BENIGN-097",
+    "url": "https://sub96.example.com/path96/index.html?param=value96",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 19,
+    "description": "Synthetic clean URL variant #97"
+  },
+  {
+    "id": "BENIGN-098",
+    "url": "https://sub97.example.com/path97/index.html?param=value97",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 19,
+    "description": "Synthetic clean URL variant #98"
+  },
+  {
+    "id": "BENIGN-099",
+    "url": "https://sub98.example.com/path98/index.html?param=value98",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 19,
+    "description": "Synthetic clean URL variant #99"
+  },
+  {
+    "id": "BENIGN-100",
+    "url": "https://sub99.example.com/path99/index.html?param=value99",
+    "expectedCategory": "BENIGN",
+    "maxAllowedScore": 19,
+    "description": "Synthetic clean URL variant #100"
+  },
+  {
+    "id": "PHISH-001",
+    "url": "http://192.0.2.10/login",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 30,
+    "description": "Plain HTTP + Raw IP + Login Keyword"
+  },
+  {
+    "id": "PHISH-002",
+    "url": "http://198.51.100.44/signin-account",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 30,
+    "description": "Raw IP + Signin"
+  },
+  {
+    "id": "PHISH-003",
+    "url": "http://203.0.113.88/secure-banking/verify",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 30,
+    "description": "IP host with banking keyword"
+  },
+  {
+    "id": "PHISH-004",
+    "url": "http://192.0.2.15:8080/portal/auth",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 30,
+    "description": "IP host with custom port and auth"
+  },
+  {
+    "id": "PHISH-005",
+    "url": "http://198.51.100.22/password-reset.php",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 30,
+    "description": "IP host with password reset"
+  },
+  {
+    "id": "PHISH-006",
+    "url": "http://0x7f000001/login",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 30,
+    "description": "Hex IP host with login"
+  },
+  {
+    "id": "PHISH-007",
+    "url": "http://0177.0.0.1/verify",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 30,
+    "description": "Octal IP host with verify"
+  },
+  {
+    "id": "PHISH-008",
+    "url": "http://2130706433/account",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 30,
+    "description": "Dword integer IP host"
+  },
+  {
+    "id": "PHISH-009",
+    "url": "http://google.com@sample-attacker.invalid/login",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 30,
+    "description": "Userinfo @ symbol masquerade"
+  },
+  {
+    "id": "PHISH-010",
+    "url": "http://paypal.com@verify-account.invalid/signin",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 30,
+    "description": "Userinfo PayPal brand spoofing"
+  },
+  {
+    "id": "PHISH-011",
+    "url": "http://apple.com@security-update.invalid/auth",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 30,
+    "description": "Userinfo Apple brand spoofing"
+  },
+  {
+    "id": "PHISH-012",
+    "url": "http://bank.com@malicious-redirect.invalid/",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 30,
+    "description": "Userinfo banking disguise"
+  },
+  {
+    "id": "PHISH-013",
+    "url": "https://a.b.c.d.e.sample-phish.invalid/path",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 30,
+    "description": "Excessive subdomain nesting (5 segments)"
+  },
+  {
+    "id": "PHISH-014",
+    "url": "https://login.verify.account.portal.attacker.invalid/",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 30,
+    "description": "Nested lure subdomains"
+  },
+  {
+    "id": "PHISH-015",
+    "url": "https://sbi.online.banking.secure.phish.invalid/otp",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 30,
+    "description": "Nested Indian bank lure subdomains"
+  },
+  {
+    "id": "PHISH-016",
+    "url": "https://xn--example.invalid/",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 30,
+    "description": "Punycode IDN domain"
+  },
+  {
+    "id": "PHISH-017",
+    "url": "http://xn--e1afmkfd.example.invalid/account",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 30,
+    "description": "Cyrillic homoglyph in punycode"
+  },
+  {
+    "id": "PHISH-018",
+    "url": "https://xn--appl-43d.com/support",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 30,
+    "description": "Apple brand homoglyph"
+  },
+  {
+    "id": "PHISH-019",
+    "url": "https://g00gle.com/secure-login",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 30,
+    "description": "Google leetspeak typosquatting"
+  },
+  {
+    "id": "PHISH-020",
+    "url": "http://paypaI.com/verify-account",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 30,
+    "description": "PayPal Latin-I typosquatting"
+  },
+  {
+    "id": "PHISH-021",
+    "url": "https://micr0soft.com/update",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 30,
+    "description": "Microsoft leetspeak typosquatting"
+  },
+  {
+    "id": "PHISH-022",
+    "url": "https://amaz0n-security.com/signin",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 30,
+    "description": "Amazon leetspeak typosquatting"
+  },
+  {
+    "id": "PHISH-023",
+    "url": "https://app1e-id-verify.com/login",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 30,
+    "description": "Apple leetspeak typosquatting"
+  },
+  {
+    "id": "PHISH-024",
+    "url": "https://netf1ix-billing.com/update-payment",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 30,
+    "description": "Netflix leetspeak typosquatting"
+  },
+  {
+    "id": "PHISH-025",
+    "url": "https://apple-id-verify-secure-login-account.com",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 30,
+    "description": "Combosquatting with 5 hyphens"
+  },
+  {
+    "id": "PHISH-026",
+    "url": "https://paypal-security-center-update.com/signin",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 30,
+    "description": "PayPal combosquatting"
+  },
+  {
+    "id": "PHISH-027",
+    "url": "https://chase-bank-verify-account-notice.com/auth",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 30,
+    "description": "Chase bank combosquatting"
+  },
+  {
+    "id": "PHISH-028",
+    "url": "https://microsoft-office365-security-portal.com/login",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 30,
+    "description": "Office365 combosquatting"
+  },
+  {
+    "id": "PHISH-029",
+    "url": "http://onlinesbi-portal-kyc-update.com/login",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 30,
+    "description": "SBI online banking KYC lure"
+  },
+  {
+    "id": "PHISH-030",
+    "url": "https://sbi-rewards-redemption-points.com/claim",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 30,
+    "description": "SBI reward point scam"
+  },
+  {
+    "id": "PHISH-031",
+    "url": "http://hdfc-netbanking-kyc-verify.com/login",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 30,
+    "description": "HDFC netbanking KYC lure"
+  },
+  {
+    "id": "PHISH-032",
+    "url": "https://icicibank-security-otp-portal.com/auth",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 30,
+    "description": "ICICI netbanking OTP lure"
+  },
+  {
+    "id": "PHISH-033",
+    "url": "http://paytm-kyc-verification-reward.com/scratch",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 30,
+    "description": "Paytm KYC reward lure"
+  },
+  {
+    "id": "PHISH-034",
+    "url": "https://phonepe-cashback-reward-claim.com/accept",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 30,
+    "description": "PhonePe cashback reward lure"
+  },
+  {
+    "id": "PHISH-035",
+    "url": "https://secure-invoice-download.zip/",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 30,
+    "description": "File extension TLD .zip"
+  },
+  {
+    "id": "PHISH-036",
+    "url": "https://account-update-notice.mov/",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 30,
+    "description": "File extension TLD .mov"
+  },
+  {
+    "id": "PHISH-037",
+    "url": "http://login-verify-account.tk/",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 30,
+    "description": "Freenom free TLD .tk"
+  },
+  {
+    "id": "PHISH-038",
+    "url": "http://banking-portal-secure.ml/",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 30,
+    "description": "Freenom free TLD .ml"
+  },
+  {
+    "id": "PHISH-039",
+    "url": "https://paypal-verification-center.top/",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 30,
+    "description": "High-abuse TLD .top"
+  },
+  {
+    "id": "PHISH-040",
+    "url": "https://appleid-security-check.xyz/",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 30,
+    "description": "High-abuse TLD .xyz"
+  },
+  {
+    "id": "PHISH-041",
+    "url": "https://bankofamerica-alert.click/",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 30,
+    "description": "High-abuse TLD .click"
+  },
+  {
+    "id": "PHISH-042",
+    "url": "https://secure-login.duckdns.org/paypal",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 30,
+    "description": "Dynamic DNS provider host with PayPal lure"
+  },
+  {
+    "id": "PHISH-043",
+    "url": "http://sbi-kyc.ngrok.io/verify",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 30,
+    "description": "Ngrok tunnel with banking lure"
+  },
+  {
+    "id": "PHISH-044",
+    "url": "https://microsoft-login-verify.vercel.app/",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 30,
+    "description": "Free cloud PaaS with Microsoft login lure"
+  },
+  {
+    "id": "PHISH-045",
+    "url": "https://metamask-connect-auth.github.io/",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 30,
+    "description": "Free cloud PaaS with crypto wallet lure"
+  },
+  {
+    "id": "PHISH-046",
+    "url": "https://example-share.invalid/downloads/urgent-invoice.pdf.exe",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 30,
+    "description": "Double file extension pdf.exe"
+  },
+  {
+    "id": "PHISH-047",
+    "url": "https://file-host.invalid/statement.xlsx.scr",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 30,
+    "description": "Screen saver executable extension"
+  },
+  {
+    "id": "PHISH-048",
+    "url": "https://cloud-storage.invalid/update-patch.apk",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 30,
+    "description": "Android package dropper"
+  },
+  {
+    "id": "PHISH-049",
+    "url": "https://example.com/?redirect=http://attacker-phish.invalid/login",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 30,
+    "description": "Open redirect to external protocol"
+  },
+  {
+    "id": "PHISH-050",
+    "url": "https://example.com/out?url=https://fake-login-portal.invalid/auth",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 30,
+    "description": "Open redirect URL parameter"
+  },
+  {
+    "id": "PHISH-051",
+    "url": "https://example.invalid/collect.php?password=supersecret&user=admin",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 30,
+    "description": "Password exposed in query string"
+  },
+  {
+    "id": "PHISH-052",
+    "url": "https://example.invalid/verify?email=victim%40corp.invalid&token=9876",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 30,
+    "description": "Victim email pre-fill in query"
+  },
+  {
+    "id": "PHISH-053",
+    "url": "https://metamask-wallet-connect-airdrop.crypto.invalid/",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 30,
+    "description": "Crypto wallet airdrop lure"
+  },
+  {
+    "id": "PHISH-054",
+    "url": "https://binance-airdrop-bonus-claim.com/login",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 30,
+    "description": "Binance airdrop bonus lure"
+  },
+  {
+    "id": "PHISH-055",
+    "url": "https://paypal183749274.com/login",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 30,
+    "description": "Long numeric sequence in brand domain"
+  },
+  {
+    "id": "PHISH-056",
+    "url": "https://goooogle.com/search",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 30,
+    "description": "Repeated characters typosquatting"
+  },
+  {
+    "id": "PHISH-057",
+    "url": "http://secure-online-banking-portal.update.com/otp",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 30,
+    "description": "Compound banking portal with OTP"
+  },
+  {
+    "id": "PHISH-058",
+    "url": "http://192.0.2.67/portal/secure-account-verify?user=victim57",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 40,
+    "description": "Synthetic compound phishing attack #58"
+  },
+  {
+    "id": "PHISH-059",
+    "url": "http://192.0.2.68/portal/secure-account-verify?user=victim58",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 40,
+    "description": "Synthetic compound phishing attack #59"
+  },
+  {
+    "id": "PHISH-060",
+    "url": "http://192.0.2.69/portal/secure-account-verify?user=victim59",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 40,
+    "description": "Synthetic compound phishing attack #60"
+  },
+  {
+    "id": "PHISH-061",
+    "url": "http://192.0.2.70/portal/secure-account-verify?user=victim60",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 40,
+    "description": "Synthetic compound phishing attack #61"
+  },
+  {
+    "id": "PHISH-062",
+    "url": "http://192.0.2.71/portal/secure-account-verify?user=victim61",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 40,
+    "description": "Synthetic compound phishing attack #62"
+  },
+  {
+    "id": "PHISH-063",
+    "url": "http://192.0.2.72/portal/secure-account-verify?user=victim62",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 40,
+    "description": "Synthetic compound phishing attack #63"
+  },
+  {
+    "id": "PHISH-064",
+    "url": "http://192.0.2.73/portal/secure-account-verify?user=victim63",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 40,
+    "description": "Synthetic compound phishing attack #64"
+  },
+  {
+    "id": "PHISH-065",
+    "url": "http://192.0.2.74/portal/secure-account-verify?user=victim64",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 40,
+    "description": "Synthetic compound phishing attack #65"
+  },
+  {
+    "id": "PHISH-066",
+    "url": "http://192.0.2.75/portal/secure-account-verify?user=victim65",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 40,
+    "description": "Synthetic compound phishing attack #66"
+  },
+  {
+    "id": "PHISH-067",
+    "url": "http://192.0.2.76/portal/secure-account-verify?user=victim66",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 40,
+    "description": "Synthetic compound phishing attack #67"
+  },
+  {
+    "id": "PHISH-068",
+    "url": "http://192.0.2.77/portal/secure-account-verify?user=victim67",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 40,
+    "description": "Synthetic compound phishing attack #68"
+  },
+  {
+    "id": "PHISH-069",
+    "url": "http://192.0.2.78/portal/secure-account-verify?user=victim68",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 40,
+    "description": "Synthetic compound phishing attack #69"
+  },
+  {
+    "id": "PHISH-070",
+    "url": "http://192.0.2.79/portal/secure-account-verify?user=victim69",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 40,
+    "description": "Synthetic compound phishing attack #70"
+  },
+  {
+    "id": "PHISH-071",
+    "url": "http://192.0.2.80/portal/secure-account-verify?user=victim70",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 40,
+    "description": "Synthetic compound phishing attack #71"
+  },
+  {
+    "id": "PHISH-072",
+    "url": "http://192.0.2.81/portal/secure-account-verify?user=victim71",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 40,
+    "description": "Synthetic compound phishing attack #72"
+  },
+  {
+    "id": "PHISH-073",
+    "url": "http://192.0.2.82/portal/secure-account-verify?user=victim72",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 40,
+    "description": "Synthetic compound phishing attack #73"
+  },
+  {
+    "id": "PHISH-074",
+    "url": "http://192.0.2.83/portal/secure-account-verify?user=victim73",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 40,
+    "description": "Synthetic compound phishing attack #74"
+  },
+  {
+    "id": "PHISH-075",
+    "url": "http://192.0.2.84/portal/secure-account-verify?user=victim74",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 40,
+    "description": "Synthetic compound phishing attack #75"
+  },
+  {
+    "id": "PHISH-076",
+    "url": "http://192.0.2.85/portal/secure-account-verify?user=victim75",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 40,
+    "description": "Synthetic compound phishing attack #76"
+  },
+  {
+    "id": "PHISH-077",
+    "url": "http://192.0.2.86/portal/secure-account-verify?user=victim76",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 40,
+    "description": "Synthetic compound phishing attack #77"
+  },
+  {
+    "id": "PHISH-078",
+    "url": "http://192.0.2.87/portal/secure-account-verify?user=victim77",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 40,
+    "description": "Synthetic compound phishing attack #78"
+  },
+  {
+    "id": "PHISH-079",
+    "url": "http://192.0.2.88/portal/secure-account-verify?user=victim78",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 40,
+    "description": "Synthetic compound phishing attack #79"
+  },
+  {
+    "id": "PHISH-080",
+    "url": "http://192.0.2.89/portal/secure-account-verify?user=victim79",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 40,
+    "description": "Synthetic compound phishing attack #80"
+  },
+  {
+    "id": "PHISH-081",
+    "url": "http://192.0.2.90/portal/secure-account-verify?user=victim80",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 40,
+    "description": "Synthetic compound phishing attack #81"
+  },
+  {
+    "id": "PHISH-082",
+    "url": "http://192.0.2.91/portal/secure-account-verify?user=victim81",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 40,
+    "description": "Synthetic compound phishing attack #82"
+  },
+  {
+    "id": "PHISH-083",
+    "url": "http://192.0.2.92/portal/secure-account-verify?user=victim82",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 40,
+    "description": "Synthetic compound phishing attack #83"
+  },
+  {
+    "id": "PHISH-084",
+    "url": "http://192.0.2.93/portal/secure-account-verify?user=victim83",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 40,
+    "description": "Synthetic compound phishing attack #84"
+  },
+  {
+    "id": "PHISH-085",
+    "url": "http://192.0.2.94/portal/secure-account-verify?user=victim84",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 40,
+    "description": "Synthetic compound phishing attack #85"
+  },
+  {
+    "id": "PHISH-086",
+    "url": "http://192.0.2.95/portal/secure-account-verify?user=victim85",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 40,
+    "description": "Synthetic compound phishing attack #86"
+  },
+  {
+    "id": "PHISH-087",
+    "url": "http://192.0.2.96/portal/secure-account-verify?user=victim86",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 40,
+    "description": "Synthetic compound phishing attack #87"
+  },
+  {
+    "id": "PHISH-088",
+    "url": "http://192.0.2.97/portal/secure-account-verify?user=victim87",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 40,
+    "description": "Synthetic compound phishing attack #88"
+  },
+  {
+    "id": "PHISH-089",
+    "url": "http://192.0.2.98/portal/secure-account-verify?user=victim88",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 40,
+    "description": "Synthetic compound phishing attack #89"
+  },
+  {
+    "id": "PHISH-090",
+    "url": "http://192.0.2.99/portal/secure-account-verify?user=victim89",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 40,
+    "description": "Synthetic compound phishing attack #90"
+  },
+  {
+    "id": "PHISH-091",
+    "url": "http://192.0.2.100/portal/secure-account-verify?user=victim90",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 40,
+    "description": "Synthetic compound phishing attack #91"
+  },
+  {
+    "id": "PHISH-092",
+    "url": "http://192.0.2.101/portal/secure-account-verify?user=victim91",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 40,
+    "description": "Synthetic compound phishing attack #92"
+  },
+  {
+    "id": "PHISH-093",
+    "url": "http://192.0.2.102/portal/secure-account-verify?user=victim92",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 40,
+    "description": "Synthetic compound phishing attack #93"
+  },
+  {
+    "id": "PHISH-094",
+    "url": "http://192.0.2.103/portal/secure-account-verify?user=victim93",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 40,
+    "description": "Synthetic compound phishing attack #94"
+  },
+  {
+    "id": "PHISH-095",
+    "url": "http://192.0.2.104/portal/secure-account-verify?user=victim94",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 40,
+    "description": "Synthetic compound phishing attack #95"
+  },
+  {
+    "id": "PHISH-096",
+    "url": "http://192.0.2.105/portal/secure-account-verify?user=victim95",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 40,
+    "description": "Synthetic compound phishing attack #96"
+  },
+  {
+    "id": "PHISH-097",
+    "url": "http://192.0.2.106/portal/secure-account-verify?user=victim96",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 40,
+    "description": "Synthetic compound phishing attack #97"
+  },
+  {
+    "id": "PHISH-098",
+    "url": "http://192.0.2.107/portal/secure-account-verify?user=victim97",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 40,
+    "description": "Synthetic compound phishing attack #98"
+  },
+  {
+    "id": "PHISH-099",
+    "url": "http://192.0.2.108/portal/secure-account-verify?user=victim98",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 40,
+    "description": "Synthetic compound phishing attack #99"
+  },
+  {
+    "id": "PHISH-100",
+    "url": "http://192.0.2.109/portal/secure-account-verify?user=victim99",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 40,
+    "description": "Synthetic compound phishing attack #100"
+  },
+  {
+    "id": "PHISH-101",
+    "url": "http://192.0.2.110/portal/secure-account-verify?user=victim100",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 40,
+    "description": "Synthetic compound phishing attack #101"
+  },
+  {
+    "id": "PHISH-102",
+    "url": "http://192.0.2.111/portal/secure-account-verify?user=victim101",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 40,
+    "description": "Synthetic compound phishing attack #102"
+  },
+  {
+    "id": "PHISH-103",
+    "url": "http://192.0.2.112/portal/secure-account-verify?user=victim102",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 40,
+    "description": "Synthetic compound phishing attack #103"
+  },
+  {
+    "id": "PHISH-104",
+    "url": "http://192.0.2.113/portal/secure-account-verify?user=victim103",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 40,
+    "description": "Synthetic compound phishing attack #104"
+  },
+  {
+    "id": "PHISH-105",
+    "url": "http://192.0.2.114/portal/secure-account-verify?user=victim104",
+    "expectedCategory": "PHISHING",
+    "minAllowedScore": 40,
+    "description": "Synthetic compound phishing attack #105"
+  }
+]
